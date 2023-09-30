@@ -48,7 +48,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.text.input.ImeAction
 import androidx.core.view.WindowCompat
 
 import com.example.mycompose.ui.theme.MyComposeTheme
@@ -56,6 +55,7 @@ import com.example.mycompose.ui.theme.MyComposeTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             MyComposeTheme {
 
@@ -63,16 +63,22 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-}
+  }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginUi(){
 
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
+
+    Scaffold(contentWindowInsets = WindowInsets(left = 0.dp,
+        top=0.dp, bottom = 0.dp, right = 0.dp),
+    ) {paddingValues->
         Box(modifier = Modifier
             .fillMaxSize()
+            .padding(paddingValues)
             .background(Color.Red)){
 
             Column(modifier = Modifier
@@ -150,7 +156,7 @@ fun LoginUi(){
             } } }
 
 
-
+    }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

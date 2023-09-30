@@ -29,14 +29,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.times
 
 
-
 /*
 
+@Preview
 @Composable
 fun HomePage() {
     Column(
@@ -64,9 +65,9 @@ fun HeaderRow() {
         // ImageButton for Location
         ImageButton(
             imgRes = R.drawable.location,
-            onClick = { */
-/* Handle location click *//*
- }
+            onClick = {
+
+            }
         )
 
         Text(text = "Boston, MA", fontSize = 22.sp, modifier = Modifier.padding(start = 5.dp))
@@ -76,9 +77,7 @@ fun HeaderRow() {
         // ImageButton for Search
         ImageButton(
             imgRes = R.drawable.search1,
-            onClick = { */
-/* Handle search click *//*
- },
+            onClick = {},
             modifier = Modifier.padding(end = 5.dp)
         )
     }
@@ -257,6 +256,8 @@ fun MainCard() {
                 verticalArrangement = Arrangement.Center){
                 Text(text = "$85.62", fontSize = 15.sp,
                     color = Color.White) }
+
+
             Spacer(modifier = Modifier.weight(1f))
             Column(modifier = Modifier
                 .height(30.dp)
@@ -369,8 +370,8 @@ fun FoodItemDetail(color: Color, text:String, img: Int, fontColor: Color){
         }
     }
 }
-*/
 
+*/
 
 
 

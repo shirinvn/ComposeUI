@@ -13,7 +13,7 @@ val Typography = Typography(
     bodyLarge = TextStyle(
         fontFamily = FontFamily(
             Font(
-            R.font.dubai)
+            R.font.primary_regular)
         ),
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
